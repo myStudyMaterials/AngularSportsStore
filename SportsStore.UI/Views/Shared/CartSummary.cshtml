@@ -4,5 +4,5 @@
         {{itemCount()}} item(s),
         {{total() | currency}}
     </div>
-    <a class="btn btn-default navbar-btn">Checkout</a>
+    @Html.ActionLink("Checkout", "CheckoutSummary", "Home", null, new { @class = "btn btn-default navbar-btn" })
 </div>

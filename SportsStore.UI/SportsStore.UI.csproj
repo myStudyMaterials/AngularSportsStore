@@ -120,6 +120,7 @@
     <Content Include="Images\preloader.GIF" />
     <Content Include="Scripts\externalScripts\components\cart\cartService.js" />
     <Content Include="Scripts\externalScripts\components\cart\cartDirective.js" />
+    <Content Include="Scripts\externalScripts\controllers\cartSummaryController.js" />
     <Content Include="Scripts\externalScripts\controllers\productListControllers.js" />
     <Content Include="Scripts\externalScripts\controllers\sportsStore.js" />
     <Content Include="Scripts\externalScripts\filters\customFilters.js" />
@@ -932,6 +933,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\ProductList.cshtml" />
     <Content Include="Views\Shared\CartSummary.cshtml" />
+    <Content Include="Views\Shared\CheckoutSummary.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

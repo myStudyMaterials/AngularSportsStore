@@ -15,7 +15,7 @@
 </head>
 <body ng-controller="sportsStoreController">
     <div class="navbar navbar-inverse">
-        <a class="navbar-brand" href="#">SPORTS STORE</a>
+        @Html.ActionLink("SPORTS STORE", "Index", "Home", null, new { @class = "navbar-brand" })
         <cart-summary />
 
     </div>
@@ -35,9 +35,11 @@
         @Html.Partial("ProductList")
     </div>
 
+
     <script src="~/Scripts/libs/angular.min.js"></script>
     <script src="~/Scripts/libs/angular-route.min.js"></script>
     <script src="~/Scripts/externalScripts/modules/sportsStoreModule.js"></script>
+    <script src="~/Scripts/externalScripts/routes/productRoutes.js"></script>
     <script src="~/Scripts/externalScripts/controllers/sportsStore.js"></script>
     <script src="~/Scripts/externalScripts/filters/customFilters.js"></script>
     <script src="~/Scripts/externalScripts/controllers/productListControllers.js"></script>

@@ -7,6 +7,7 @@
             <strong>{{item.ProductName}}</strong>
             <span class="pull-right label label-primary">{{item.Price | currency}}</span>
         </h3>
+        <button ng-click="addProduct(item)" class="btn btn-success pull-right">Add to cart</button>
         <span class="lead">{{item.Description}}</span>
     </div>
     <div class="pull-right btn-group">

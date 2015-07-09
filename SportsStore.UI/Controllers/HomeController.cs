@@ -22,6 +22,10 @@ namespace SportsStore.UI.Controllers
             return View();
         }
 
+        public ActionResult CheckoutSummary()
+        {
+            return View();
+        }
         [HttpPost]
         public JsonResult GetProducts()
         {

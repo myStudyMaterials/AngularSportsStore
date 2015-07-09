@@ -5,7 +5,7 @@
         addProduct: function (product) {
             var addedToExistingItem = false;
             for (var i = 0; i < cartData.length; i++) {
-                if (product.id == cartData[i].id) {
+                if (product.ProductId == cartData[i].ProductId) {
                     cartData[i].Count++;
                     addedToExistingItem = true;
                     break;
@@ -19,7 +19,7 @@
         },
         removeProduct: function (id) {
             for (var i = 0; i < data.length; i++) {
-                if (cartData[i].Id == id) {
+                if (cartData[i].ProductId == id) {
                     cartData.splice(i, 1);
                     break;
                 }
