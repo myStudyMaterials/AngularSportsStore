@@ -25,4 +25,5 @@
     $scope.getPageClass = function (page) {
         return $scope.selectedPage == page ? productListActiveClass : "";
     };
+
 });

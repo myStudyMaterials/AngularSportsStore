@@ -16,37 +16,33 @@
 <body ng-controller="sportsStoreController">
     <div class="navbar navbar-inverse">
         <a class="navbar-brand" href="#">SPORTS STORE</a>
+        <cart-summary />
+
     </div>
-    <div class="panel panel-default row" ng-controller="productListControllers">
+    <div class="alert alert-info" ng-show="data.loaderValue">
+        <img src="~/Images/preloader.GIF" />
+    </div>
+    <div class="alert alert-danger" ng-show="data.error">
+        Error : {{data.error.status}} . The product data was not loaded.
+        @Html.ActionLink("Click here to try again", "Index");
+    </div>
+    <div class="panel panel-default row" ng-controller="productListControllers" ng-hide="data.error">
         <div class="col-xs-3">
             <a ng-click="selectCategory()" class="btn btn-block btn-default btn-lg">Home</a>
             <a ng-repeat="item in data.products |orderBy:'CategoryName' | unique:'CategoryName'"
                ng-click="selectCategory(item)" class="btn btn-block btn-default btn-lg" ng-class="getCategoryClass(item)">{{item}}</a>
         </div>
-        <div class="col-xs-8">
-            <div class="well" ng-repeat="item in data.products | filter:categoryFilterFunction |range:selectedPage:pageSize">
-                <h3>
-                    <strong>{{item.ProductName}}</strong>
-                    <span class="pull-right label label-primary">{{item.Price | currency}}</span>
-                </h3>
-                <span class="lead">{{item.Description}}</span>
-            </div>
-            <div class="pull-right btn-group">
-                <a ng-repeat="page in data.products | filter:categoryFilterFunction |pageCount:pageSize" ng-click="selectPage($index + 1)" class="btn btn-default"
-                   ng-class="getPageClass($index + 1)">
-                    {{$index + 1}}
-                </a>
-            </div>
-        </div>
+        @Html.Partial("ProductList")
     </div>
 
     <script src="~/Scripts/libs/angular.min.js"></script>
     <script src="~/Scripts/libs/angular-route.min.js"></script>
     <script src="~/Scripts/externalScripts/modules/sportsStoreModule.js"></script>
     <script src="~/Scripts/externalScripts/controllers/sportsStore.js"></script>
-    <script src="~/Scripts/externalScripts/services/productServices.js"></script>
     <script src="~/Scripts/externalScripts/filters/customFilters.js"></script>
     <script src="~/Scripts/externalScripts/controllers/productListControllers.js"></script>
+    <script src="~/Scripts/externalScripts/components/cart/cartService.js"></script>
+    <script src="~/Scripts/externalScripts/components/cart/cartDirective.js"></script>
 
 
 </body>

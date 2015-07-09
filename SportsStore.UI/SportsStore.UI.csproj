@@ -108,6 +108,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -116,11 +117,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Images\preloader.GIF" />
+    <Content Include="Scripts\externalScripts\components\cart\cartService.js" />
+    <Content Include="Scripts\externalScripts\components\cart\cartDirective.js" />
     <Content Include="Scripts\externalScripts\controllers\productListControllers.js" />
     <Content Include="Scripts\externalScripts\controllers\sportsStore.js" />
     <Content Include="Scripts\externalScripts\filters\customFilters.js" />
     <Content Include="Scripts\externalScripts\modules\sportsStoreModule.js" />
-    <Content Include="Scripts\externalScripts\services\productServices.js" />
     <Content Include="Scripts\libs\angular-animate.js" />
     <Content Include="Scripts\libs\angular-animate.min.js" />
     <Content Include="Scripts\libs\angular-aria.js" />
@@ -927,6 +930,8 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Shared\ProductList.cshtml" />
+    <Content Include="Views\Shared\CartSummary.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -937,7 +942,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\externalScripts\components\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SportsStore.Domain\SportsStore.Domain.csproj">

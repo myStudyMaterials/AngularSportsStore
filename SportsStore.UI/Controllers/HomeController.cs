@@ -17,6 +17,11 @@ namespace SportsStore.UI.Controllers
             return View();
         }
 
+        public ActionResult CartSummary()
+        {
+            return View();
+        }
+
         [HttpPost]
         public JsonResult GetProducts()
         {
